@@ -5,7 +5,7 @@ public  class Market implements MarketBehaviour, QueueBehaviour {
 
     private List<Human> actors = new ArrayList<Human>();
 
-    private List<Human> actorsAtOffice = new ArrayList<Human>();// сначала думал сделать через Queue, но раз надо
+    private List<Human> actorsAtOffice = new ArrayList<Human>();
 
     public void acceptToMarket(Human actor) {// входит в магазин
         if (!actors.contains(actor)) {
@@ -16,7 +16,7 @@ public  class Market implements MarketBehaviour, QueueBehaviour {
         }
     }
 
-    public void acceptToMarket(List<Human> grup) {// группа входит в магазин
+    public void acceptToMarket(List<Human> grup) {
         for (Human actor : grup) {
             actors.add(actor);
         }
